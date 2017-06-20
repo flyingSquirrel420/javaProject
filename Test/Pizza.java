@@ -11,14 +11,16 @@ public class Pizza {
 	double d2 = d;
 	
 	ArrayList <Double> a = new ArrayList <Double>();
-	a= {3.0,5.0};
+	
 	}
 
 	public String toString(){
 		for (int i =0; i<board.length; i++){
 			for(int j =0; i<board[0].length; j++){
-				return board[i][j];
+				return "";
 			}
 		}
+	return "";
 	}
+	
 }

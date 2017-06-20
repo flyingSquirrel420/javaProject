@@ -30,11 +30,6 @@ public class List101 {
 		
 	}
 	
-	public void add (Object item){
-		if (i == numItem){
-			expandArray();
-		}
-		item[numItems] = item;
-		numItems++;
-	}
+	
+		
 }
