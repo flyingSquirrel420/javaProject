@@ -1,0 +1,99 @@
+
+Homework #2
+1.
+a) condForEx1, condForEx2, condForEx3 are all false -> Output:
+main begins.
+a begins
+main caught Ex1.
+main finally.
+main completes. 
+
+b) condForEx1 is true, and condForEx2 and condForEx3 are false ->Output:
+main begins
+a begins
+b begins
+b finally
+b completes
+a completes
+b begins
+b finally
+b completes
+main finally
+main completes.
+
+c)condForEx1 and condForEx2 are true and condForEx3 is false.
+Output:
+main begins
+a begins
+b begins
+b finally
+a caught Ex2
+a completes
+b begins
+b finally
+main finally
+*program terminated
+
+d)condForEx1, and condForEx3 are true, but condForEx2 is false.
+Output:
+main begins
+a begins
+b begins
+b caught ex3
+b finally
+b completes
+a completes
+b begins
+b caught ex3
+b finally
+b completes
+main finally
+main completes
+
+e) Then the method header for b() and main() should have "throws Ex2()" after the method parameter; 
+
+Question #2:
+#2 
+(1a) it will cause an exception because neither chain1 nor chain2 is empty, but when they are trying to access the data inside chain1 and chain2, when it's still empty, it will have a NullPointerException.
+(1b) it will return false;
+(1c)  it will return true because chain1 and chain2 are both null now.
+(1d) it will return false because the two data are different
+(1e) it will return true because chain1 and chain2 are the same
+(1f) it will return false because the two data are different
+(1g) it will generate an error because trying to access chain2, that is empty, would generate a NullPointerException.
+(2) 
+
+Question #3:
+	public static <E> E findKthToLastItem(Listnode<E> head, int k) {
+		//this variable will keep count of nodes in the linked list.
+		int count = 0;
+		//Create another current reference that reference to the start of the list.
+		Listnode<E> curr = head;
+		//This try catch block will count all the elements in the linked list, until it refers to the last element, then it will catch the Exception, and break out of the while loop.
+		try{
+			while(true){
+				curr = curr.getNext();
+				count++;
+			}
+		}catch(NullPointerException e){
+		}
+		//This try catch block will prevent user from enter a number that is greater than the length of the linked list.
+		try{
+			//This conditional statement will check if the integer k that the user passed in is greater than or equal to the amount of nodes in the linked list, if so, we will create another current variable that reference to the beginning of the list.
+			//Through the for loop, it will traverse through the list for count-k times. And store the value to newCurr.
+			if(k <= count){
+				Listnode<E> newCurr = head;
+				for(int i =0; i<count-k;i++){
+					newCurr = newCurr.getNext();
+				}
+				return newCurr.getData();
+			}
+			else{
+				throw new IndexOutOfBoundsException();
+			}
+		}catch(IndexOutOfBoundsException e){
+			System.out.println("There are not enough elements" );
+		}
+		return null; 
+	}
+
