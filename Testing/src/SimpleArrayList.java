@@ -80,7 +80,6 @@ public class SimpleArrayList<E> implements ListADT<E>{
 		//check position is valid
 		if (numItems == 0) throw new IndexOutOfBoundsException();
 		if (pos > numItems || pos < 0) throw new IllegalArgumentException();
-		
 		//Remove at the end of the items.
 		int lastIndex = numItems - 1;
 		if(pos == lastIndex){
