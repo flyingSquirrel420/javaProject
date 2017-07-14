@@ -133,7 +133,7 @@ public class Recursion {
 //		System.out.println("Number of step it took " + numStep);
 //		solveTowers(6, "SourceDisk","Destination Disk", "spareDisk");
 //		System.out.println("Number of step it took " + numStep);
-		solveTowers(50, "SourceDisk","Destination Disk", "spareDisk");
+		solveTowers(4, "SourceDisk","Destination Disk", "spareDisk");
 	}
 
 

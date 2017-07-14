@@ -28,6 +28,16 @@ public class LinkedList <E> implements ListADT<E>{
 
 
 	//Override methods
+	
+
+	@Override 
+	public void reverse() {
+	//Reverse the linkedlist. 
+	Listnode<E> curr = head;
+	//Set the next to curr's next. Set the curr's next to previous. Update "prev" to point to "curr".
+	//Update "curr"to next
+	
+	}
 
 
 	/*This add method add the new node into the end of the list. */

@@ -44,7 +44,7 @@ public class SimpleArrayList<E> implements ListADT<E>{
 			shadowArray[carryIndex] = myArray[carryIndex];
 		}
 		carryIndex++;
-		numItems ++;
+		numItems++;
 		return true;
 	}
 
